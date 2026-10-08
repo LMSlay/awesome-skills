@@ -91,6 +91,11 @@ Invalid, private and unavailable videos are not charged. Before a large run, sho
       --user-agent apify-awesome-skills/apify-video-content-intelligence \
       2>/dev/null
 
+The call returns run metadata. Read `storage.defaultDatasetId` and fetch the results:
+
+    apify datasets get-items DATASET_ID --format json \
+      --user-agent apify-awesome-skills/apify-video-content-intelligence 2>/dev/null
+
 Fetch the input schema before building unusual inputs:
 
     apify actors info "tubetext/video-breakdown-ai" --input --json \
